@@ -76,7 +76,7 @@ function addFavorite(id){
         return fetch(`http://localhost:3000/favorite`,{
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "data/json",
             },
             body: JSON.stringify(data)
         })
@@ -94,7 +94,7 @@ function removeFavorite(id){
     fetch(`http://localhost:3000/all/${id}`,{
         method:"DELETE",
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "data/json",
         }
     })
     .then(res => res.json())
